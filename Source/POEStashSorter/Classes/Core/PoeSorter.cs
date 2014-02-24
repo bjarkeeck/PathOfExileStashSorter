@@ -51,6 +51,9 @@ namespace POEStashSorter
                     case SortBy.MapLevel:
                         SortMaps();
                         break;
+                    case SortBy.Image:
+                        SimpleSort(UnSortedItems.OrderBy(x => x.Image));
+                        break;
                     case SortBy.GemQuality:
                         SortGemsByQuality();
                         break;
@@ -72,7 +75,6 @@ namespace POEStashSorter
         private void SortGemsByQuality()
         {
             var q = UnSortedItems.Where(c => c.Quiality > 0).OrderByDescending(c => c.Quiality).ThenBy(c => c.Name);
-
             if (q == null || q.Count() == 0)
             {
                 Log.Message("");
@@ -107,13 +109,29 @@ namespace POEStashSorter
                 }
             }
         }
+        private void SimpleSort(IEnumerable<StashItem> q)
+        {
+            int x = 0;
+            int y = 0;
+
+            foreach (var item in q)
+            {
+                AddSortedItem(x, y, item);
+                x += 1;
+                if (x == 12)
+                {
+                    y++;
+                    x = 0;
+                }
+            }
+        }
 
         private void SortMaps()
         {
             int x = 0;
             int y = 0;
 
-            var q = UnSortedItems.OrderBy(c => c.MapLevel).ThenBy(c => c.Name).ThenBy(c => c.Quiality);
+            var q = UnSortedItems.OrderBy(c => c.MapLevel).ThenBy(c => c.Image).ThenBy(c => c.Quiality);
             int currentMapLevel = q.First().MapLevel;
 
             foreach (var item in q)

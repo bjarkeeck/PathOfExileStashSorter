@@ -89,6 +89,7 @@ namespace POEStashSorter
         public int Quiality;
         public int MapLevel = 0;
         public int Id;
+        public string Image;
     }
 
 
@@ -102,8 +103,6 @@ namespace POEStashSorter
 
     public enum League
     {
-        Domination,
-        Nemisis,
         Standard,
         Hardcore
     }
@@ -120,7 +119,8 @@ namespace POEStashSorter
         GemType,
         GemColor,
         GemQuality,
-        MapLevel
+        MapLevel,
+        Image
     }
 
 }

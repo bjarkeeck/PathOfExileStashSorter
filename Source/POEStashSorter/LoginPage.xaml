@@ -14,7 +14,7 @@
         <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="209,236,0,0" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="150,118,0,0" VerticalAlignment="Top"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="130,153,0,0" VerticalAlignment="Top"/>
-        <Label Content="Type correctly of application will crash!" HorizontalAlignment="Left" Margin="141,203,0,0" VerticalAlignment="Top" Width="225" Background="White" Foreground="#FFFF1D1D"/>
+        <Label Content="Type correctly - or application will simply crash" HorizontalAlignment="Left" Margin="122,203,0,0" VerticalAlignment="Top" Width="263" Background="White" Foreground="#FFFF1D1D"/>
         <Label Content="Login to your path of exile account" HorizontalAlignment="Left" Margin="150,54,0,0" VerticalAlignment="Top" Width="225" Background="White" Foreground="Black"/>
     </Grid>
 </Page>

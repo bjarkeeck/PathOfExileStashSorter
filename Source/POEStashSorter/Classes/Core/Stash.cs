@@ -63,22 +63,22 @@ namespace POEStashSorter
                 {
                     StashItem gem = new StashItem();
 
-                    if (item.icon.ToLower().Contains("gems") || item.icon.ToLower().Contains("maps"))
+                    if (item.icon.ToLower().Contains("gems") || item.icon.ToLower().Contains("maps") || item.icon.ToLower().Contains("amulets") || item.icon.ToLower().Contains("rings"))
                     {
-
                         i++;
 
                         gem.Id = i;
                         gem.X = item.x;
                         gem.Y = item.y;
                         gem.Name = item.typeLine;
+                        gem.Image = item.icon;
 
                         if (item.icon.ToLower().Contains("maps"))
                         {
                             var taa = item.properties.FirstOrDefault(x => x.name.ToLower() == "map level");
                             gem.MapLevel = Convert.ToInt32(((JArray)taa.values.First()).ToObject<List<string>>().First());
                         }
-                        else
+                        else if (item.icon.ToLower().Contains("gems"))
                         {
                             Requirement topRequirement = item.requirements
                                 .Where(x => x.name.ToLower() == "dex" || x.name.ToLower() == "str" || x.name.ToLower() == "int")
@@ -101,7 +101,7 @@ namespace POEStashSorter
                             }
                         }
 
-                        if (item.properties.Any(x => x.name.ToLower() == "quality"))
+                        if (item.properties != null && item.properties.Any(x => x.name.ToLower() == "quality"))
                         {
                             var ta = item.properties.FirstOrDefault(x => x.name.ToLower() == "quality");
                             gem.Quiality = Convert.ToInt32(((JArray)ta.values.First()).ToObject<List<string>>().First().Replace("+", "").Replace("-", "").Replace("%", ""));

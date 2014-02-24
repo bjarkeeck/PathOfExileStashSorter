@@ -20,3 +20,25 @@ C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\b
 C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\HtmlAgilityPack.xml
 C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\POEStashSorter.exe.config
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.exe
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.pdb
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\POEStashSorter.exe
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\POEStashSorter.pdb
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.dll
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\Newtonsoft.Json.dll
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.xml
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.csprojResolveAssemblyReference.cache
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\LoginPage.baml
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\MainPage.baml
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\MainWindow.baml
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\LoginPage.g.cs
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\MainPage.g.cs
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\MainWindow.g.cs
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\App.g.cs
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter_MarkupCompile.cache
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.g.resources
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.Properties.Resources.resources
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.csproj.GenerateResource.Cache

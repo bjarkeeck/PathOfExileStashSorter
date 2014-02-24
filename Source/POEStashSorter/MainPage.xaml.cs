@@ -24,7 +24,7 @@ namespace POEStashSorter
         private PoeConnector poeConnector;
         private PoeSorter poeSorter = new PoeSorter();
 
-        private League currentLeague = League.Domination;
+        private League currentLeague = League.Standard;
         private SortBy currentSorting = SortBy.GemType;
         private StashTab currentStashTab;
         private float speed = 1;
@@ -94,6 +94,7 @@ namespace POEStashSorter
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort gems by color", Tag = SortBy.GemColor });
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort gems by quality", Tag = SortBy.GemQuality });
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort maps by level", Tag = SortBy.MapLevel });
+            ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort maps by image", Tag = SortBy.Image });
 
         }
 
