@@ -37,13 +37,19 @@ namespace POEStashSorter
             {
                 while (true)
                 {
-                    Dispatcher.BeginInvoke(new ThreadStart(() =>
+                    try
                     {
-                        txtOutput.Text = string.Join(Environment.NewLine, Log.Messages);
-                        txtOutput.ScrollToEnd();
-                        btnSort.IsEnabled = PoeConnector.IsBusy == false;
-                    }));
-                    Thread.Sleep(200);
+                        Dispatcher.BeginInvoke(new ThreadStart(() =>
+                        {
+                            txtOutput.Text = string.Join(Environment.NewLine, Log.Messages);
+                            txtOutput.ScrollToEnd();
+                            btnSort.IsEnabled = PoeConnector.IsBusy == false;
+                        }));
+                        Thread.Sleep(200);
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
             });
             t1.SetApartmentState(ApartmentState.STA);
@@ -74,6 +80,8 @@ namespace POEStashSorter
             t2.SetApartmentState(ApartmentState.STA);
             t2.Start();
 
+            MainWindow.Current.Closing += (sender, e) => { t1.Interrupt(); t1.Abort(); t2.Interrupt(); t2.Abort(); };
+
             this.poeConnector = poeConnector;
 
             //Add Leagues
@@ -97,6 +105,7 @@ namespace POEStashSorter
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort maps by image", Tag = SortBy.Image });
 
         }
+
 
         private void changeLeague()
         {
