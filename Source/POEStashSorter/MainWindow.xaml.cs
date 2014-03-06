@@ -26,5 +26,17 @@ namespace POEStashSorter
             Current = this;
             InitializeComponent();
         }
+
+        protected override void OnKeyDown(KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                if (MainPage.Current != null)
+                {
+                    MainPage.Current.poeSorter.Interrupt();
+                }
+            }
+            base.OnKeyDown(e);
+        }
     }
 }

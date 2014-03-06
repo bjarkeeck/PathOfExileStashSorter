@@ -284,6 +284,7 @@ namespace POEStashSorter
         }
 
         bool isSorting = false;
+        bool interrupt = false;
         private void StartSorting()
         {
             if (isSorting == false)
@@ -303,13 +304,18 @@ namespace POEStashSorter
 
                     while (unsortedItems != null)
                     {
+                        if (interrupt == true)
+                        {
+                            interrupt = false;
+                            break;
+                        }
                         StashItem sortedItem = SortedItems.FirstOrDefault(x => x.Id == unsortedItems.Id);
 
                         Point unsortedPos = new Point(startPos.X + unsortedItems.X * cellWidth, startPos.Y + unsortedItems.Y * cellHeight);
 
                         if (selectGem)
                         {
-                            MouseTools.MoveCursor(MouseTools.GetMousePosition(), unsortedPos, (int)(5 * speed));
+                            MouseTools.MoveCursor(MouseTools.GetMousePosition(), unsortedPos, (int)(5 / speed));
                             MouseTools.MouseClickEvent();
                             Thread.Sleep((int)(400 * speed));
                         }
@@ -318,7 +324,7 @@ namespace POEStashSorter
 
                         Log.Message("Moving " + unsortedItems.Name + " from " + unsortedItems.X + "," + unsortedItems.Y + " to " + sortedItem.X + "," + sortedItem.Y);
 
-                        MouseTools.MoveCursor(MouseTools.GetMousePosition(), sortedPos, (int)(5 * speed));
+                        MouseTools.MoveCursor(MouseTools.GetMousePosition(), sortedPos, (int)(5 / speed));
                         MouseTools.MouseClickEvent();
                         Thread.Sleep((int)(400 * speed));
 
@@ -352,5 +358,10 @@ namespace POEStashSorter
             isSorting = false;
         }
 
+
+        public void Interrupt()
+        {
+            interrupt = true;
+        }
     }
 }

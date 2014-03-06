@@ -102,7 +102,7 @@ namespace POEStashSorter
 
                             if (gem.Image.ToLower().Contains("icenova"))
                             {
-                                gem.GemColor = GemColor.Green;
+                                gem.GemColor = GemColor.Blue;
                             }
                         }
 

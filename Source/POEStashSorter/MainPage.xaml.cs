@@ -21,8 +21,9 @@ namespace POEStashSorter
     /// </summary>
     public partial class MainPage : Page
     {
+        public static MainPage Current;
         private PoeConnector poeConnector;
-        private PoeSorter poeSorter = new PoeSorter();
+        public PoeSorter poeSorter = new PoeSorter();
 
         private League currentLeague = League.Invasion;
         private SortBy currentSorting = SortBy.GemType;
@@ -32,7 +33,7 @@ namespace POEStashSorter
         public MainPage(PoeConnector poeConnector)
         {
             InitializeComponent();
-
+            MainPage.Current = this;
             Thread t1 = new Thread(() =>
             {
                 while (true)
@@ -92,11 +93,10 @@ namespace POEStashSorter
                 i++;
             }
 
-            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Fast (not recommended!) 50%", Tag = 1.5f });
+            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Fast (not recommended!) 60%", Tag = 0.6f });
             ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Normal 100%", IsSelected = true, Tag = 1f });
-            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Slow 200%", Tag = 0.5f });
-            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Really slow 400%", Tag = 0.25f });
-
+            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Slow 200%", Tag = 2f });
+            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Really slow 400%", Tag = 4f });
 
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort gems by type", Tag = SortBy.GemType, IsSelected = currentSorting == SortBy.GemType });
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort gems by color", Tag = SortBy.GemColor });
@@ -150,6 +150,7 @@ namespace POEStashSorter
         {
             speed = (float)((ComboBoxItem)ddlSpeed.SelectedItem).Tag;
         }
+
 
         private void btnSort_Click(object sender, RoutedEventArgs e)
         {

@@ -19,3 +19,4 @@ C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Release\
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Release\POEStashSorter.exe
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Release\POEStashSorter.pdb
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Release\POEStashSorter.csprojResolveAssemblyReference.cache
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Release\HtmlAgilityPack.dll
