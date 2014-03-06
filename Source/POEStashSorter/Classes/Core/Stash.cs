@@ -99,6 +99,11 @@ namespace POEStashSorter
                                 //Scan image and find color.
                                 gem.GemColor = GetImageColor(item.icon);
                             }
+
+                            if (gem.Image.ToLower().Contains("icenova"))
+                            {
+                                gem.GemColor = GemColor.Green;
+                            }
                         }
 
                         if (item.properties != null && item.properties.Any(x => x.name.ToLower() == "quality"))

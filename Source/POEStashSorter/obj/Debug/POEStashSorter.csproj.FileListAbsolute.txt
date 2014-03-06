@@ -25,7 +25,6 @@ C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\PO
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.pdb
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\POEStashSorter.exe
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\POEStashSorter.pdb
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.dll
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\Newtonsoft.Json.dll
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.xml

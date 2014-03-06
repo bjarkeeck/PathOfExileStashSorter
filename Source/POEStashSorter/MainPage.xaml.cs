@@ -24,7 +24,7 @@ namespace POEStashSorter
         private PoeConnector poeConnector;
         private PoeSorter poeSorter = new PoeSorter();
 
-        private League currentLeague = League.Standard;
+        private League currentLeague = League.Invasion;
         private SortBy currentSorting = SortBy.GemType;
         private StashTab currentStashTab;
         private float speed = 1;
@@ -92,17 +92,17 @@ namespace POEStashSorter
                 i++;
             }
 
-            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Fast (not recommended!) 50%", Tag = 0.5f });
+            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Fast (not recommended!) 50%", Tag = 1.5f });
             ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Normal 100%", IsSelected = true, Tag = 1f });
-            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Slow 200%", Tag = 2f });
-            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Really slow 400%", Tag = 4f });
+            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Slow 200%", Tag = 0.5f });
+            ddlSpeed.Items.Add(new ComboBoxItem() { Content = "Really slow 400%", Tag = 0.25f });
 
 
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort gems by type", Tag = SortBy.GemType, IsSelected = currentSorting == SortBy.GemType });
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort gems by color", Tag = SortBy.GemColor });
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort gems by quality", Tag = SortBy.GemQuality });
             ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort maps by level", Tag = SortBy.MapLevel });
-            ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort maps by image", Tag = SortBy.Image });
+            ddlSort.Items.Add(new ComboBoxItem() { Content = "Sort items by image", Tag = SortBy.Image });
 
         }
 

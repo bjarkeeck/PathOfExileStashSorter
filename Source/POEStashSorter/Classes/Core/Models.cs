@@ -103,6 +103,8 @@ namespace POEStashSorter
 
     public enum League
     {
+        Ambush,
+        Invasion,
         Standard,
         Hardcore
     }
