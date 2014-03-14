@@ -41,3 +41,4 @@ C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\PO
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.g.resources
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.Properties.Resources.resources
 C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.csproj.GenerateResource.Cache
+C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.dll

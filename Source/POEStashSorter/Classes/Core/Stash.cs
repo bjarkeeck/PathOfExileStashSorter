@@ -75,8 +75,17 @@ namespace POEStashSorter
 
                         if (item.icon.ToLower().Contains("maps"))
                         {
-                            var taa = item.properties.FirstOrDefault(x => x.name.ToLower() == "map level");
-                            gem.MapLevel = Convert.ToInt32(((JArray)taa.values.First()).ToObject<List<string>>().First());
+                            if (item.properties != null)
+                            {
+                                try
+                                {
+                                    var taa = item.properties.FirstOrDefault(x => x.name.ToLower() == "map level");
+                                    gem.MapLevel = Convert.ToInt32(((JArray)taa.values.First()).ToObject<List<string>>().First());
+                                }
+                                catch (Exception)
+                                {
+                                }
+                            }
                         }
                         else if (item.icon.ToLower().Contains("gems"))
                         {
