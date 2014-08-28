@@ -1,0 +1,9 @@
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\x86\Debug\PoeStashSorterModels.dll
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\x86\Debug\PoeStashSorterModels.pdb
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\x86\Debug\HtmlAgilityPack.dll
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\x86\Debug\HtmlAgilityPack.pdb
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\x86\Debug\HtmlAgilityPack.xml
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\obj\x86\Debug\PoeStashSorterModels.dll
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\obj\x86\Debug\PoeStashSorterModels.pdb

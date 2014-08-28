@@ -1,44 +1,73 @@
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\POEStashSorter.exe.config
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\POEStashSorter.exe
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\POEStashSorter.pdb
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.csprojResolveAssemblyReference.cache
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\LoginPage.baml
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\MainWindow.baml
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\LoginPage.g.cs
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\MainWindow.g.cs
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\App.g.cs
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter_MarkupCompile.cache
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.g.resources
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.Properties.Resources.resources
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.csproj.GenerateResource.Cache
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.exe
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.pdb
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\MainPage.baml
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\obj\Debug\MainPage.g.cs
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\HtmlAgilityPack.dll
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\Newtonsoft.Json.dll
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\HtmlAgilityPack.pdb
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\HtmlAgilityPack.xml
-C:\Users\b\Documents\Visual Studio 2012\Projects\POEStashSorter\POEStashSorter\bin\Debug\Newtonsoft.Json.xml
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\POEStashSorter.exe.config
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.exe
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.pdb
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\POEStashSorter.exe
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\POEStashSorter.pdb
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\Newtonsoft.Json.dll
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.pdb
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.xml
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\Newtonsoft.Json.xml
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.csprojResolveAssemblyReference.cache
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\LoginPage.baml
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\MainPage.baml
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\MainWindow.baml
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\LoginPage.g.cs
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\MainPage.g.cs
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\MainWindow.g.cs
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\App.g.cs
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter_MarkupCompile.cache
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.g.resources
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.Properties.Resources.resources
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\obj\Debug\POEStashSorter.csproj.GenerateResource.Cache
-C:\Users\b\Desktop\Git\PathOfExileStashSorter\Source\POEStashSorter\bin\Debug\HtmlAgilityPack.dll
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\POEStashSorter.exe.config
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.csprojResolveAssemblyReference.cache
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter_MarkupCompile.cache
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.g.resources
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.Properties.Resources.resources
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.csproj.GenerateResource.Cache
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\POEStashSorter.exe
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\POEStashSorter.pdb
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\HtmlAgilityPack.dll
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\HtmlAgilityPack.pdb
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\HtmlAgilityPack.xml
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.exe
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter.pdb
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\Newtonsoft.Json.dll
+c:\users\bjarke\documents\visual studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bjarke\Documents\Visual Studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\MainWindow.baml
+C:\Users\Bjarke\Documents\Visual Studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\MainWindow.g.cs
+C:\Users\Bjarke\Documents\Visual Studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\App.g.cs
+C:\Users\Bjarke\Documents\Visual Studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\SortingAlgorithms\SortMaps.cs
+C:\Users\Bjarke\Documents\Visual Studio 2013\Projects\POEStashSorter\POEStashSorter\bin\Debug\SortingAlgorithms\SortGems.cs
+C:\Users\Bjarke\Documents\Visual Studio 2013\Projects\POEStashSorter\POEStashSorter\obj\Debug\POEStashSorter_Content.g.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\data\POEStashSorter.exe.config
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\POEStashSorter.exe
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\POEStashSorter.pdb
+C:\Users\Bjarke\Desktop\POEStashSorterv2\data\SortingAlgorithms\SortMaps.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\data\SortingAlgorithms\SortGems.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\data\POEStashSorter.exe
+C:\Users\Bjarke\Desktop\POEStashSorterv2\data\POEStashSorter.pdb
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\POEStashSorter.csprojResolveAssemblyReference.cache
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\MainWindow.baml
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\MainWindow.g.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\App.g.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\POEStashSorter_Content.g.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\POEStashSorter_MarkupCompile.cache
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\POEStashSorter.g.resources
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\POEStashSorter.Properties.Resources.resources
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\obj\Debug\POEStashSorter.csproj.GenerateResource.Cache
+C:\Users\Bjarke\Desktop\POEStashSorterv2\bin\POEStashSorter.exe.config
+C:\Users\Bjarke\Desktop\POEStashSorterv2\bin\POEStashSorter.exe
+C:\Users\Bjarke\Desktop\POEStashSorterv2\bin\POEStashSorter.pdb
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\POEStashSorter.exe
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\POEStashSorter.pdb
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\POEStashSorter.csprojResolveAssemblyReference.cache
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\MainWindow.baml
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\MainWindow.g.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\App.g.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\POEStashSorter_MarkupCompile.cache
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\POEStashSorter.g.resources
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\POEStashSorter.Properties.Resources.resources
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\POEStashSorter.csproj.GenerateResource.Cache
+C:\Users\Bjarke\Desktop\POEStashSorterv2\bin\SortingAlgorithms\SortGems.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\bin\SortingAlgorithms\SortMaps.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\LoginWindow.baml
+C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorter\obj\Debug\LoginWindow.g.cs
+C:\Users\Bjarke\Desktop\POEStashSorterv2\bin\SortingAlgorithms\SortJewlery.cs
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\bin\SortingAlgorithms\SortGems.cs
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\bin\SortingAlgorithms\SortJewlery.cs
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\bin\SortingAlgorithms\SortMaps.cs
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\bin\POEStashSorter.exe.config
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\bin\POEStashSorter.exe
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\bin\POEStashSorter.pdb
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\POEStashSorter.csprojResolveAssemblyReference.cache
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\LoginWindow.baml
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\MainWindow.baml
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\LoginWindow.g.cs
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\MainWindow.g.cs
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\App.g.cs
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\POEStashSorter_MarkupCompile.cache
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\POEStashSorter.g.resources
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\POEStashSorter.Properties.Resources.resources
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\POEStashSorter.csproj.GenerateResource.Cache
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\POEStashSorter.exe
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorter\obj\Debug\POEStashSorter.pdb
