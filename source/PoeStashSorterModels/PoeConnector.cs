@@ -56,10 +56,14 @@ namespace POEStashSorterModels
         public static List<Tab> FetchTabs(League league)
         {
             string jsonData = WebClinet.DownloadString(string.Format(STASHURL, league.Name, 0));
-            Stash stash = JsonConvert.DeserializeObject<Stash>(jsonData);
-            List<Tab> tabs = stash.Tabs;
-            tabs.ForEach(x => x.League = league);
-            return tabs;
+            if (jsonData != "false")
+            {
+                Stash stash = JsonConvert.DeserializeObject<Stash>(jsonData);
+                List<Tab> tabs = stash.Tabs;
+                tabs.ForEach(x => x.League = league);
+                return tabs;
+            }
+            return new List<Tab>();
         }
 
         public static Tab FetchTab(int tabIndex, League league)
