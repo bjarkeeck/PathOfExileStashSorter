@@ -173,7 +173,7 @@ namespace POEStashSorterModels
 
         public static async void SetSelectedTab(Tab tab)
         {
-            if (SelectedTab != tab && tab != null)
+            if (tab != null)
             {
                 // Unselect current tab
                 if (SelectedTab != null)
@@ -282,5 +282,6 @@ namespace POEStashSorterModels
         }
 
         public static int SortingSpeed { get; set; }
+
     }
 }

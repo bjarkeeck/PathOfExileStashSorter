@@ -28,7 +28,7 @@ namespace POEStashSorter
         {
             InitializeComponent();
             PoeSorter.Initialize(stashPanel, Dispatcher, ddlSortMode, ddlSortOption);
-
+            txtSearch.Visibility = System.Windows.Visibility.Hidden;
             StashTabs.DisplayMemberPath = "Name";
             ddlSortMode.DisplayMemberPath = "Name";
             PopulateLeagueDDL();
@@ -113,6 +113,43 @@ namespace POEStashSorter
             {
                 Settings.Instance.Speed = sliderSpeed.Value;
                 Settings.Instance.SaveChanges();
+            }
+
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F3)
+            {
+                txtSearch.Visibility = (txtSearch.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible);
+                if (txtSearch.Visibility == System.Windows.Visibility.Visible)
+                    txtSearch.Focus();
+
+            }
+            if (e.Key == Key.F5)
+            {
+                if (PoeSorter.SelectedTab != null && PoeSorter.SelectedTab.Items != null)
+                {
+                    PoeSorter.SelectedTab.Items.ForEach(c =>
+                    {
+                        if (PoeSorter.ItemCanvas.Children.Contains(c.Image))
+                            PoeSorter.ItemCanvas.Children.Remove(c.Image);
+                    });
+                    PoeSorter.SelectedTab.Items = null;
+                    PoeSorter.SetSelectedTab(PoeSorter.SelectedTab); // trigger download
+                }
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (PoeSorter.Initialized)
+            {
+                foreach (var tab in PoeSorter.SelectedLeague.Tabs)
+                    tab.IsVisible = tab.Name.ToLower().Contains(txtSearch.Text.ToLower());
+
+                StashTabs.ItemsSource = null;
+                StashTabs.ItemsSource = PoeSorter.SelectedLeague.Tabs;
             }
 
         }

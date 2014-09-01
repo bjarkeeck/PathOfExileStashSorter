@@ -45,7 +45,13 @@ namespace POEStashSorterModels
         }
         public string Name { get; set; }
 
-        public List<Tab> Tabs { get; set; }
+        public List<Tab> AllTabs = new List<Tab>();
+        private List<Tab> tabs;
+        public List<Tab> Tabs
+        {
+            get { return tabs; }
+            set { tabs = value; }
+        }
 
     }
 
@@ -390,67 +396,6 @@ namespace POEStashSorterModels
             }
         }
 
-        //private void ScanGemImage(BitmapImage bitmap)
-        //{
-        //    if (Settings.Instance.GemColorInfo.ContainsKey(this.Name) == false)
-        //    {
-        //        int stride = bitmap.PixelWidth * 4;
-        //        int size = bitmap.PixelHeight * stride;
-        //        byte[] pixels = new byte[size];
-        //        bitmap.CopyPixels(pixels, stride, 0);
-
-
-        //        float r = 0;
-        //        float g = 0;
-        //        float b = 0;
-        //        int count = 0;
-
-
-        //        for (int i = 0; i < pixels.Length; i += 4)
-        //        {
-        //            int alpha = pixels[i + 3];
-        //            if (alpha > 0)
-        //            {
-        //                r += pixels[i + 2];
-        //                g += pixels[i + 1];
-        //                b += pixels[i];
-        //                count++;
-        //            }
-        //        }
-        //        float total = r + g + b;
-        //        r /= total;
-        //        g /= total;
-        //        b /= total;
-
-        //        GemRequirement gemReq = POEStashSorterModels.GemRequirement.None;
-
-        //        //for vaal gems
-        //        if (this.FullItemName.ToLower().StartsWith("vaal "))
-        //        {
-
-        //            if (g + b < 0.5f)
-        //                gemReq = GemRequirement.Str;
-        //            else
-        //                if (g > b)
-        //                    gemReq = GemRequirement.Dex;
-        //                else if (b > g)
-        //                    gemReq = GemRequirement.Int;
-        //        }
-        //        else
-        //        {
-        //            //For normal gems
-        //            if (r > g && r > b)
-        //                gemReq = GemRequirement.Str;
-        //            else if (g > r && g > b)
-        //                gemReq = GemRequirement.Dex;
-        //            else
-        //                gemReq = GemRequirement.Int;
-        //        }
-
-        //        Settings.Instance.GemColorInfo.Add(this.FullItemName, gemReq);
-        //        Settings.Instance.SaveChanges();
-        //    }
-        //}
 
         public Tab Tab { get; set; }
 
@@ -716,5 +661,11 @@ namespace POEStashSorterModels
             }
         }
 
+        public bool IsVisible { get; set; }
+
+        public Tab()
+        {
+            IsVisible = true;
+        }
     }
 }

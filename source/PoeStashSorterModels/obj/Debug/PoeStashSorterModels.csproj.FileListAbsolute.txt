@@ -18,3 +18,16 @@ C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\obj\Debug\P
 C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\Release\protobuf-net.dll
 C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\Release\protobuf-net.pdb
 C:\Users\Bjarke\Desktop\POEStashSorterv2\source\PoeStashSorterModels\bin\Release\protobuf-net.xml
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\PoeStashSorterModels.dll
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\PoeStashSorterModels.pdb
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\HtmlAgilityPack.dll
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\Newtonsoft.Json.dll
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\protobuf-net.dll
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\HtmlAgilityPack.pdb
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\HtmlAgilityPack.xml
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\Newtonsoft.Json.xml
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\protobuf-net.pdb
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\bin\Release\protobuf-net.xml
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\obj\Debug\PoeStashSorterModels.csprojResolveAssemblyReference.cache
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\obj\Debug\PoeStashSorterModels.dll
+C:\Users\Bjarke\Desktop\Projects\GIT\PathOfExileStashSorter\source\PoeStashSorterModels\obj\Debug\PoeStashSorterModels.pdb
