@@ -22,27 +22,26 @@ namespace POEStashSorterModels
         public static void Connect(string email, string password, bool useSessionId = false)
         {
             WebClinet = new CookieAwareWebClient();
-
-            string loginHtml = WebClinet.DownloadString(LOGINURL);
-
             if (useSessionId)
             {
                 WebClinet.Cookies.Add(new System.Net.Cookie("PHPSESSID", password, "/", "www.pathofexile.com"));
-                // TODO, properbly needs more work...
             }
+            else
+            {
+                string loginHtml = WebClinet.DownloadString(LOGINURL);
+                HtmlDocument h = new HtmlDocument();
+                h.LoadHtml(loginHtml);
+                string hash = h.DocumentNode.SelectNodes("//input[@name='hash']").First().Attributes["value"].Value;
 
-            HtmlDocument h = new HtmlDocument();
-            h.LoadHtml(loginHtml);
-            string hash = h.DocumentNode.SelectNodes("//input[@name='hash']").First().Attributes["value"].Value;
-
-            WebClinet.BaseAddress = LOGINURL;
-            var loginData = new NameValueCollection();
-            loginData.Add("login_email", email);
-            loginData.Add("login_password", password);
-            loginData.Add("login", "Login");
-            loginData.Add("remember_me", "0");
-            loginData.Add("hash", hash);
-            WebClinet.UploadValues("/login", "POST", loginData);
+                WebClinet.BaseAddress = LOGINURL;
+                var loginData = new NameValueCollection();
+                loginData.Add("login_email", email);
+                loginData.Add("login_password", password);
+                loginData.Add("login", "Login");
+                loginData.Add("remember_me", "0");
+                loginData.Add("hash", hash);
+                WebClinet.UploadValues("/login", "POST", loginData);
+            }
         }
 
         public static List<League> FetchLeagues()
