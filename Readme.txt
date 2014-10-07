@@ -1,0 +1,1 @@
+Open POEStashSorter.exe located in the bin folder
