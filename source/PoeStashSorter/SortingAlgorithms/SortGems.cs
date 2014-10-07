@@ -23,9 +23,9 @@ public class SortGems : SortingAlgorithm
         else if (options["Sort by type"])
         {
             SortEm(
-                gems.Where(x => x.GemType == GemType.Normal).OrderByDescending(x => x.FullItemName).ThenBy(x => x.LevelRequirement),
-                gems.Where(x => x.GemType == GemType.Support).OrderByDescending(x => x.FullItemName).ThenBy(x => x.LevelRequirement),
-                gems.Where(x => x.GemType == GemType.Aura).OrderByDescending(x => x.FullItemName).ThenBy(x => x.LevelRequirement)
+                gems.Where(x => x.GemType == GemType.Normal).OrderBy(x => x.FullItemName).ThenBy(x => x.LevelRequirement),
+                gems.Where(x => x.GemType == GemType.Support).OrderBy(x => x.FullItemName).ThenBy(x => x.LevelRequirement),
+                gems.Where(x => x.GemType == GemType.Aura).OrderBy(x => x.FullItemName).ThenBy(x => x.LevelRequirement)
             );
         }
         else if (options["Sort by quality"])

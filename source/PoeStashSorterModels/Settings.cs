@@ -89,6 +89,9 @@ namespace POEStashSorterModels
         [XmlElement(Order = 2)]
         public string Password;
 
+        [XmlElement(Order = 7)]
+        public string SessionID;
+
         [XmlElement(Order = 4)]
         public Dictionary<string, GemRequirement> GemColorInfo = new Dictionary<string, GemRequirement>();
 
