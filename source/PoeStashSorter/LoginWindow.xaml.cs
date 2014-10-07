@@ -52,12 +52,13 @@ namespace POEStashSorter
             Settings.Instance.Password = null;
             Settings.Instance.SessionID = null;
 
+            username = txtEmail.Text;
+            password = txtPassword.Password;
+
             if (chkRememberMe.IsChecked == true && !useSessionID)
             {
                 Settings.Instance.Username = txtEmail.Text;
                 Settings.Instance.Password = txtPassword.Password.Encrypt();
-                username = txtEmail.Text;
-                password = txtPassword.Password;
             }
             else if (chkRememberMe.IsChecked == true)
             {
