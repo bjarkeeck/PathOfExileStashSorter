@@ -93,7 +93,8 @@ namespace POEStashSorterModels
             PoeSorter.Dispatcher = dispatcher;
             PoeSorter.ItemCanvas = itemCanvas;
             PoeSorter.Leagues = PoeConnector.FetchLeagues();
-            PoeSorter.Character = PoeConnector.FetchCharecters();
+            
+            //PoeSorter.Character = PoeConnector.FetchCharecters();
         }
 
         public static void ReloadAlgorithms()
@@ -277,6 +278,7 @@ namespace POEStashSorterModels
         {
             new Thread(() =>
             {
+                Thread.Sleep(200);
                 SelectedSortingAlgorithm.StartSorting(SelectedTab, SelectedTabSorted);
             }).Start();
         }

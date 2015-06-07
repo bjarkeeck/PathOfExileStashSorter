@@ -65,6 +65,7 @@ namespace POEStashSorterModels
             return new List<Tab>();
         }
 
+        [Obsolete]
         public static Tab FetchTab(int tabIndex, League league)
         {
             string jsonData = WebClinet.DownloadString(string.Format(STASHURL, league.Name, tabIndex));
