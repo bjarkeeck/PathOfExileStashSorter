@@ -78,6 +78,7 @@
     <Compile Include="Direction.cs" />
     <Compile Include="GemRequirement.cs" />
     <Compile Include="GemType.cs" />
+    <Compile Include="InterruptEvent.cs" />
     <Compile Include="Math.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="MouseTools.cs" />

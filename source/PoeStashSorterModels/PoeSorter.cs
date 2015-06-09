@@ -15,6 +15,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Xml.Linq;
+using PoeStashSorterModels;
 
 namespace POEStashSorterModels
 {
@@ -274,13 +275,9 @@ namespace POEStashSorterModels
             }
         }
 
-        public static void StartSorting()
+        public static void StartSorting(InterruptEvent interruptEvent)
         {
-            new Thread(() =>
-            {
-                Thread.Sleep(200);
-                SelectedSortingAlgorithm.StartSorting(SelectedTab, SelectedTabSorted);
-            }).Start();
+            SelectedSortingAlgorithm.StartSorting(SelectedTab, SelectedTabSorted, interruptEvent);
         }
 
         public static int SortingSpeed { get; set; }

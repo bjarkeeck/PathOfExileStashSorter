@@ -8,6 +8,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using PoeStashSorterModels;
 using Image = System.Drawing.Image;
 
 namespace POEStashSorterModels
@@ -195,7 +196,7 @@ namespace POEStashSorterModels
             }
         }
 
-        public void StartSorting(Tab unsortedTab, Tab sortedTab)
+        public void StartSorting(Tab unsortedTab, Tab sortedTab, InterruptEvent interruptEvent)
         {
             try
             {
@@ -215,10 +216,9 @@ namespace POEStashSorterModels
 
                         while (unsortedItem != null)
                         {
-                            if (interrupt == true)
+                            if (interruptEvent.Isinterrupted())
                             {
-                                interrupt = false;
-                                break;
+                                throw new Exception("Interrupted");
                             }
                             Item sortedItem = sortedTab.Items.FirstOrDefault(x => x.Id == unsortedItem.Id);
                             Vector2 unsortedPos = new Vector2(startPos.X + unsortedItem.X * cellWidth, startPos.Y + unsortedItem.Y * cellHeight);
