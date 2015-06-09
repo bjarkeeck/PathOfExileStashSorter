@@ -216,7 +216,7 @@ namespace POEStashSorterModels
 
                         while (unsortedItem != null)
                         {
-                            if (interruptEvent.Isinterrupted())
+                            if (interruptEvent.Isinterrupted)
                             {
                                 throw new Exception("Interrupted");
                             }

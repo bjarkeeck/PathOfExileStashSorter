@@ -81,7 +81,7 @@ namespace POEStashSorter
                 var keyCode = lParam.ToInt32() >> 16;
                 if (keyCode == ESCAPE)
                 {
-                    interruptEvent.Isinterrupted = () => true;
+                    interruptEvent.Isinterrupted =  true;
                 }
             }
             return IntPtr.Zero;
@@ -135,7 +135,7 @@ namespace POEStashSorter
         private async void StartSorting_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
-            interruptEvent.Isinterrupted = () => false;
+            interruptEvent.Isinterrupted =  false;
             RegisterHotKey(handle, 9999, 0, ESCAPE);
             await Task.Delay(300);
             await Task.Run(() => PoeSorter.StartSorting(interruptEvent));
