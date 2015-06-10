@@ -4,44 +4,21 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using PoeStashSorterModels.Servers;
 
 namespace POEStashSorterModels
 {
 
     public static class PoeConnector
     {
-        public static CookieAwareWebClient WebClinet = null;
-
-        private const string LOGINURL = "https://www.pathofexile.com/login";
-        private const string CHARACTERURL = "http://www.pathofexile.com/character-window/get-characters";
-        private const string STASHURL = "http://www.pathofexile.com/character-window/get-stash-items?league={0}&tabs=1&tabIndex={1}";
-
-        public static void Connect(string email, string password, bool useSessionId = false)
+        public static Server server;
+       
+        public static void Connect(Server server, string email, string password, bool useSessionId = false)
         {
-            WebClinet = new CookieAwareWebClient();
-            if (useSessionId)
-            {
-                WebClinet.Cookies.Add(new System.Net.Cookie("PHPSESSID", password, "/", "www.pathofexile.com"));
-            }
-            else
-            {
-                string loginHtml = WebClinet.DownloadString(LOGINURL);
-                HtmlDocument h = new HtmlDocument();
-                h.LoadHtml(loginHtml);
-                string hash = h.DocumentNode.SelectNodes("//input[@name='hash']").First().Attributes["value"].Value;
-
-                WebClinet.BaseAddress = LOGINURL;
-                var loginData = new NameValueCollection();
-                loginData.Add("login_email", email);
-                loginData.Add("login_password", password);
-                loginData.Add("login", "Login");
-                loginData.Add("remember_me", "0");
-                loginData.Add("hash", hash);
-                WebClinet.UploadValues("/login", "POST", loginData);
-            }
+            PoeConnector.server = server;
+            server.Connect(email,password,useSessionId);
         }
 
         public static List<League> FetchLeagues()
@@ -54,7 +31,7 @@ namespace POEStashSorterModels
 
         public static List<Tab> FetchTabs(League league)
         {
-            string jsonData = WebClinet.DownloadString(string.Format(STASHURL, league.Name, 0));
+            string jsonData = server.WebClient.DownloadString(string.Format(server.StashUrl, league.Name, 0));
             if (jsonData != "false")
             {
                 Stash stash = JsonConvert.DeserializeObject<Stash>(jsonData);
@@ -68,7 +45,7 @@ namespace POEStashSorterModels
         [Obsolete]
         public static Tab FetchTab(int tabIndex, League league)
         {
-            string jsonData = WebClinet.DownloadString(string.Format(STASHURL, league.Name, tabIndex));
+            string jsonData = server.WebClient.DownloadString(string.Format(server.StashUrl, league.Name, tabIndex));
             Stash stash = JsonConvert.DeserializeObject<Stash>(jsonData);
             Tab tab = stash.Tabs.FirstOrDefault(x => x.Index == tabIndex);
             tab.Items = stash.Items;
@@ -77,8 +54,8 @@ namespace POEStashSorterModels
 
         public static async Task<Tab> FetchTabAsync(int tabIndex, League league)
         {
-            while (WebClinet.IsBusy) { }
-            string jsonData = await WebClinet.DownloadStringTaskAsync(new Uri(string.Format(STASHURL, league.Name, tabIndex)));
+            while (server.WebClient.IsBusy) { }
+            string jsonData = await server.WebClient.DownloadStringTaskAsync(new Uri(string.Format(server.StashUrl, league.Name, tabIndex)));
             Stash stash = JsonConvert.DeserializeObject<Stash>(jsonData);
             Tab tab = stash.Tabs.FirstOrDefault(x => x.Index == tabIndex);
             tab.Items = stash.Items;
@@ -88,24 +65,9 @@ namespace POEStashSorterModels
         public static List<Character> FetchCharecters()
         {
             List<Character> charecters;
-            string jsonData = WebClinet.DownloadString(CHARACTERURL);
+            string jsonData = server.WebClient.DownloadString(server.CharacterUrl);
             charecters = JsonConvert.DeserializeObject<List<Character>>(jsonData);
             return charecters;
         }
     }
-
-    public class CookieAwareWebClient : WebClient
-    {
-        internal CookieContainer Cookies = new CookieContainer();
-        protected override WebRequest GetWebRequest(Uri address)
-        {
-            WebRequest request = base.GetWebRequest(address);
-            if (request is HttpWebRequest)
-            {
-                (request as HttpWebRequest).CookieContainer = Cookies;
-            }
-            return request;
-        }
-    }
-
 }

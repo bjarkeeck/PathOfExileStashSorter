@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using POEStashSorterModels;
 using System.Threading;
 using System.Windows.Threading;
+using PoeStashSorterModels.Servers;
+
 namespace POEStashSorter
 {
     /// <summary>
@@ -21,6 +23,7 @@ namespace POEStashSorter
     /// </summary>
     public partial class LoginWindow : Window
     {
+        private Server server;
         public LoginWindow()
         {
             InitializeComponent();
@@ -36,6 +39,12 @@ namespace POEStashSorter
                 chkUseSessionID.IsChecked = true;
             }
 
+            List<Server> servers=new List<Server>();
+            servers.Add(new GeneralServer());
+            servers.Add(new GarenaCisServer());
+            CbComboBox.ItemsSource = servers;
+            CbComboBox.DisplayMemberPath = "Name";
+          
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -66,7 +75,7 @@ namespace POEStashSorter
                 password = txtSessionID.Text;
             }
 
-            PoeConnector.Connect(username, password, useSessionID);
+            PoeConnector.Connect(server, username, password, useSessionID);
 
             Settings.Instance.SaveChanges();
 
@@ -97,6 +106,13 @@ namespace POEStashSorter
                 frame.Continue = false;
             })).Start();
             Dispatcher.PushFrame(frame);
+        }
+
+        private void CbComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            server = (Server)CbComboBox.SelectedItem;
+            lblEmail.Content = server.EmailLoginName;
+            
         }
 
     }

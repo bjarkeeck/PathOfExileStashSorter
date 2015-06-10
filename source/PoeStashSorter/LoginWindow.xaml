@@ -4,20 +4,23 @@
         Title="LoginWindow" Height="341" Width="367">
     <Grid>
         <Label Content="Path Of Exile Stash Sorter" HorizontalAlignment="Left" Margin="48,29,0,0" VerticalAlignment="Top" FontSize="22" RenderTransformOrigin="0.506,0.436"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="127,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="127,143,0,0" VerticalAlignment="Top" Width="169" Height="23"/>
-        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="127,246,0,0" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
-        <Label x:Name="lblEmail" Content="Email" HorizontalAlignment="Left" Margin="69,105,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblPassword" Content="Password" HorizontalAlignment="Left" Margin="47,140,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="127,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="127,175,0,0" VerticalAlignment="Top" Width="169" Height="23"/>
+        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="130,275,0,0" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
+        <Label x:Name="lblEmail" Content="Email" HorizontalAlignment="Left" Margin="29,138,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,-1.385"/>
+        <Label x:Name="lblPassword" Content="Password" HorizontalAlignment="Left" Margin="29,175,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtSessionID" HorizontalAlignment="Left" Height="22" Margin="127,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Visibility="Hidden"/>
         <Label x:Name="lblSessionID" Content="Session ID" HorizontalAlignment="Left" Margin="42,123,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-        <Label Content="Type correctly - or application will simply crash" HorizontalAlignment="Left" Margin="40,213,0,0" VerticalAlignment="Top" Width="263" Background="White" Foreground="#FFFF1D1D"/>
+        <Label Content="Type correctly - or application will simply crash" HorizontalAlignment="Left" Margin="45,244,0,0" VerticalAlignment="Top" Width="263" Background="White" Foreground="#FFFF1D1D"/>
         <Label Content="Login to your path of exile account" HorizontalAlignment="Left" Margin="68,64,0,0" VerticalAlignment="Top" Width="225" Background="White" Foreground="Black"/>
-        <CheckBox x:Name="chkRememberMe" Content="Remember Me" HorizontalAlignment="Left" Margin="127,178,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <CheckBox x:Name="chkUseSessionID" Content="Use SesssionID" HorizontalAlignment="Left" Margin="127,198,0,0" VerticalAlignment="Top" Checked="chkUseSessionID_Checked" Unchecked="chkUseSessionID_Checked"/>
+        <CheckBox x:Name="chkRememberMe" Content="Remember Me" HorizontalAlignment="Left" Margin="129,203,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="chkUseSessionID" Content="Use SesssionID" HorizontalAlignment="Left" Margin="129,224,0,0" VerticalAlignment="Top" Checked="chkUseSessionID_Checked" Unchecked="chkUseSessionID_Checked"/>
+        <ComboBox HorizontalAlignment="Left" Margin="127,102,0,0" VerticalAlignment="Top" Width="166" Name="CbComboBox" SelectedIndex="0" SelectionChanged="CbComboBox_SelectionChanged"/>
+        <Label x:Name="lbServer" Content="Server" HorizontalAlignment="Left" Margin="29,102,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,-1.385"/>
         <Rectangle x:Name="overlayBg" Fill="White" HorizontalAlignment="Left" Height="290" Margin="10,10,0,0" Stroke="White" VerticalAlignment="Top" Width="339" Opacity="0.9" Visibility="Hidden"/>
         <Label x:Name="overlayTxt" Content="Please wait..." HorizontalAlignment="Left" Margin="127,140,0,0" VerticalAlignment="Top" Height="51" Width="112" FontSize="18" Visibility="Hidden"/>
         
+
 
     </Grid>
 </Window>
