@@ -94,6 +94,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecurityExtensions.cs" />
     <Compile Include="Servers\GarenaCisServer.cs" />
+    <Compile Include="Servers\GarenaThServer.cs" />
     <Compile Include="Servers\GeneralServer.cs" />
     <Compile Include="Servers\Server.cs" />
     <Compile Include="Settings.cs" />
