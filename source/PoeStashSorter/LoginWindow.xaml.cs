@@ -38,7 +38,7 @@ namespace POEStashSorter
                 txtSessionID.Text = Settings.Instance.SessionID;
                 chkUseSessionID.IsChecked = true;
             }
-
+            
             List<Server> servers=new List<Server>();
             servers.Add(new GeneralServer());
             servers.Add(new GarenaCisServer());
@@ -46,7 +46,8 @@ namespace POEStashSorter
             servers.Add(new GarenaSgServer());
             CbComboBox.ItemsSource = servers;
             CbComboBox.DisplayMemberPath = "Name";
-          
+
+            CbComboBox.SelectedIndex = Settings.Instance.ServerID;    
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -76,7 +77,7 @@ namespace POEStashSorter
                 Settings.Instance.SessionID = txtSessionID.Text;
                 password = txtSessionID.Text;
             }
-
+            Settings.Instance.ServerID = CbComboBox.SelectedIndex;
             PoeConnector.Connect(server, username, password, useSessionID);
 
             Settings.Instance.SaveChanges();
