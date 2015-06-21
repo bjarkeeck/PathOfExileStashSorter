@@ -47,6 +47,12 @@ namespace POEStashSorter
             PopulateLeagueDDL();
             PopulateSpeedSlider();
             PopulateSortingDDL();
+
+            if (ddlLeague.Items.Count == 0)
+            {
+                ddlLeague.IsEnabled = StartSorting.IsEnabled = ddlSortMode.IsEnabled = ddlSortOption.IsEnabled = false;
+            }
+
             this.Activated += OnFocus;
            
             this.Loaded += delegate
@@ -199,7 +205,7 @@ namespace POEStashSorter
 
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (PoeSorter.Initialized)
+            if (PoeSorter.Initialized && PoeSorter.SelectedLeague != null)
             {
                 foreach (var tab in PoeSorter.SelectedLeague.Tabs)
                     tab.IsVisible = tab.Name.ToLower().Contains(txtSearch.Text.ToLower());

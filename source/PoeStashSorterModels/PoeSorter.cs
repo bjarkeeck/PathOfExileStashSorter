@@ -31,7 +31,7 @@ namespace POEStashSorterModels
             get
             {
                 if (selectedLeague == null)
-                    selectedLeague = PoeSorter.Leagues.FirstOrDefault(x => x.Name == Settings.Instance.LastSelectedLeague) ?? PoeSorter.Leagues.First();
+                    selectedLeague = PoeSorter.Leagues.FirstOrDefault(x => x.Name == Settings.Instance.LastSelectedLeague) ?? PoeSorter.Leagues.FirstOrDefault();
 
                 return selectedLeague;
             }
