@@ -1,4 +1,6 @@
-﻿using POEStashSorterModels;
+﻿using System.Runtime.InteropServices;
+using System.Windows.Interop;
+using POEStashSorterModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PoeStashSorterModels;
 
 namespace POEStashSorter
 {
@@ -24,6 +27,16 @@ namespace POEStashSorter
     /// </summary>
     public partial class MainWindow : Window
     {
+        InterruptEvent interruptEvent=new InterruptEvent();
+         IntPtr handle=new IntPtr();
+        [DllImport("user32.dll")]
+        private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
+
+        [DllImport("user32.dll")]
+        private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
+
+        const int ESCAPE = 27;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,9 +47,53 @@ namespace POEStashSorter
             PopulateLeagueDDL();
             PopulateSpeedSlider();
             PopulateSortingDDL();
+
+            if (ddlLeague.Items.Count == 0)
+            {
+                ddlLeague.IsEnabled = StartSorting.IsEnabled = ddlSortMode.IsEnabled = ddlSortOption.IsEnabled = false;
+            }
+
             this.Activated += OnFocus;
+           
+            this.Loaded += delegate
+            {
+                handle = new WindowInteropHelper(this).Handle;
+            };
+            this.Closed += delegate
+            {
+                Unregistered();
+            };
 
         }
+
+        private void Unregistered()
+        {
+            UnregisterHotKey(handle, 9999);
+        }
+
+
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+            HwndSource source = PresentationSource.FromVisual(this) as HwndSource;
+            source.AddHook(WndProc);
+        }
+
+        private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            const int WM_HOTKEY_MSG_ID = 0x0312;
+            if (msg == WM_HOTKEY_MSG_ID)
+            {
+                var keyCode = lParam.ToInt32() >> 16;
+                if (keyCode == ESCAPE)
+                {
+                    interruptEvent.Isinterrupted =  true;
+                }
+            }
+            return IntPtr.Zero;
+        }
+
+      
 
         private void OnFocus(object sender, EventArgs e)
         {
@@ -81,9 +138,14 @@ namespace POEStashSorter
             PoeSorter.SetSelectedTab((Tab)StashTabs.SelectedItem);
         }
 
-        private void StartSorting_Click(object sender, RoutedEventArgs e)
+        private async void StartSorting_Click(object sender, RoutedEventArgs e)
         {
-            PoeSorter.StartSorting();
+            WindowState = WindowState.Minimized;
+            interruptEvent.Isinterrupted =  false;
+            RegisterHotKey(handle, 9999, 0, ESCAPE);
+            await Task.Delay(300);
+            await Task.Run(() => PoeSorter.StartSorting(interruptEvent));
+            Unregistered();
         }
 
         private void ddlSortMode_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -143,7 +205,7 @@ namespace POEStashSorter
 
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (PoeSorter.Initialized)
+            if (PoeSorter.Initialized && PoeSorter.SelectedLeague != null)
             {
                 foreach (var tab in PoeSorter.SelectedLeague.Tabs)
                     tab.IsVisible = tab.Name.ToLower().Contains(txtSearch.Text.ToLower());

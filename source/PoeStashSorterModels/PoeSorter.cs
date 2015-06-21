@@ -15,6 +15,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Xml.Linq;
+using PoeStashSorterModels;
 
 namespace POEStashSorterModels
 {
@@ -30,7 +31,7 @@ namespace POEStashSorterModels
             get
             {
                 if (selectedLeague == null)
-                    selectedLeague = PoeSorter.Leagues.FirstOrDefault(x => x.Name == Settings.Instance.LastSelectedLeague) ?? PoeSorter.Leagues.First();
+                    selectedLeague = PoeSorter.Leagues.FirstOrDefault(x => x.Name == Settings.Instance.LastSelectedLeague) ?? PoeSorter.Leagues.FirstOrDefault();
 
                 return selectedLeague;
             }
@@ -93,7 +94,8 @@ namespace POEStashSorterModels
             PoeSorter.Dispatcher = dispatcher;
             PoeSorter.ItemCanvas = itemCanvas;
             PoeSorter.Leagues = PoeConnector.FetchLeagues();
-            PoeSorter.Character = PoeConnector.FetchCharecters();
+            
+            //PoeSorter.Character = PoeConnector.FetchCharecters();
         }
 
         public static void ReloadAlgorithms()
@@ -273,12 +275,9 @@ namespace POEStashSorterModels
             }
         }
 
-        public static void StartSorting()
+        public static void StartSorting(InterruptEvent interruptEvent)
         {
-            new Thread(() =>
-            {
-                SelectedSortingAlgorithm.StartSorting(SelectedTab, SelectedTabSorted);
-            }).Start();
+            SelectedSortingAlgorithm.StartSorting(SelectedTab, SelectedTabSorted, interruptEvent);
         }
 
         public static int SortingSpeed { get; set; }

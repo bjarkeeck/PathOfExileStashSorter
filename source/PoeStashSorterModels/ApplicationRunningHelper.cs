@@ -13,10 +13,14 @@ namespace POEStashSorterModels
     [StructLayout(LayoutKind.Sequential)]
     public struct RECT
     {
-        public int Left;
-        public int Top;
-        public int Right;
-        public int Bottom;
+        public int Left { get; private set; }
+        public int Top { get; private set; }
+        public int Right { get; private set; }
+        public int Bottom { get; private set; }
+        public RECT ToRectangle(POINT point)
+        {
+            return new RECT { Left = point.X, Top = point.Y, Right = Right - Left, Bottom = Bottom - Top };
+        }
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -87,7 +91,7 @@ namespace POEStashSorterModels
                     return true;
                 }
             }
-            return false;
+            throw new Exception("Path Of Exile isn't running");
         }
 
 
@@ -95,7 +99,7 @@ namespace POEStashSorterModels
         static extern bool GetWindowRect(IntPtr hWnd, ref RECT Rect);
 
         [DllImport("user32.dll", SetLastError = true)]
-        static extern bool GetClientRect(IntPtr hWnd, ref RECT Rect);
+        static extern bool GetClientRect(IntPtr hWnd, out RECT Rect);
 
 
         [DllImport("user32.dll", SetLastError = true)]
@@ -106,24 +110,34 @@ namespace POEStashSorterModels
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true, ExactSpelling = true)]
         public static extern int ScreenToClient(IntPtr hWnd, out POINT pt);
 
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true, ExactSpelling = true)]
+        public static extern int ClientToScreen(IntPtr hWnd, out POINT pt);
+
+
 
         public static RECT PathOfExileDimentions
         {
             get
             {
-                RECT clientRect = new RECT();
-                GetClientRect(currentProcess.MainWindowHandle, ref clientRect);
+                //RECT clientRect = new RECT();
+                //GetClientRect(currentProcess.MainWindowHandle, ref clientRect);
 
+                //POINT point;
+                //ScreenToClient(currentProcess.MainWindowHandle, out point);
+
+                //RECT rect = new RECT();
+                //rect.Left = point.X * -1 + clientRect.Left;
+                //rect.Right = point.X * -1 + clientRect.Right;
+                //rect.Top = point.Y * -1 + clientRect.Top;
+                //rect.Bottom = point.Y * -1 + clientRect.Bottom;
+
+                //return rect;
+                RECT rect;
                 POINT point;
-                ScreenToClient(currentProcess.MainWindowHandle, out point);
-
-                RECT rect = new RECT();
-                rect.Left = point.X * -1 + clientRect.Left;
-                rect.Right = point.X * -1 + clientRect.Right;
-                rect.Top = point.Y * -1 + clientRect.Top;
-                rect.Bottom = point.Y * -1 + clientRect.Bottom;
-
-                return rect;
+                var handle = currentProcess.MainWindowHandle;
+                GetClientRect(handle, out rect);
+                ClientToScreen(handle, out point);
+                return rect.ToRectangle(point);
             }
         }
         //Den buggede lidt :P MEGET^^ Men du trykkede os på den forkerte sorteings ting^^ <.< hvorfor er der to? Hvis den ene er forkert :P.. den

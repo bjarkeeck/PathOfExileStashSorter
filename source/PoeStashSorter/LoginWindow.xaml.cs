@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using POEStashSorterModels;
 using System.Threading;
 using System.Windows.Threading;
+using PoeStashSorterModels.Servers;
+
 namespace POEStashSorter
 {
     /// <summary>
@@ -21,6 +23,7 @@ namespace POEStashSorter
     /// </summary>
     public partial class LoginWindow : Window
     {
+        private Server server;
         public LoginWindow()
         {
             InitializeComponent();
@@ -35,7 +38,16 @@ namespace POEStashSorter
                 txtSessionID.Text = Settings.Instance.SessionID;
                 chkUseSessionID.IsChecked = true;
             }
+            
+            List<Server> servers=new List<Server>();
+            servers.Add(new GeneralServer());
+            servers.Add(new GarenaCisServer());
+            servers.Add(new GarenaThServer());
+            servers.Add(new GarenaSgServer());
+            CbComboBox.ItemsSource = servers;
+            CbComboBox.DisplayMemberPath = "Name";
 
+            CbComboBox.SelectedIndex = Settings.Instance.ServerID;    
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -65,8 +77,8 @@ namespace POEStashSorter
                 Settings.Instance.SessionID = txtSessionID.Text;
                 password = txtSessionID.Text;
             }
-
-            PoeConnector.Connect(username, password, useSessionID);
+            Settings.Instance.ServerID = CbComboBox.SelectedIndex;
+            PoeConnector.Connect(server, username, password, useSessionID);
 
             Settings.Instance.SaveChanges();
 
@@ -97,6 +109,13 @@ namespace POEStashSorter
                 frame.Continue = false;
             })).Start();
             Dispatcher.PushFrame(frame);
+        }
+
+        private void CbComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            server = (Server)CbComboBox.SelectedItem;
+            lblEmail.Content = server.EmailLoginName;
+            
         }
 
     }

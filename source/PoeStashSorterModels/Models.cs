@@ -308,6 +308,7 @@ namespace POEStashSorterModels
                     new Thread(() =>
                     {
                         WebClient client = new WebClient();
+                        client.BaseAddress = PoeConnector.server.Url;
                         byte[] imageData = client.DownloadData(this.Icon);
                         PoeSorter.Dispatcher.Invoke(() =>
                         {

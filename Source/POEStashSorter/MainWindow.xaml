@@ -1,8 +1,8 @@
 ﻿<Window x:Name="PoE_Stash_Sorter" x:Class="POEStashSorter.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="PoE StashSorter" Height="680.125" Width="1199.667" KeyDown="Window_KeyDown">
-    <Grid x:Name="btnStartSorting" Margin="0,0,0,2" Background="#FF111111">
+        Title="PoE StashSorter" Height="703.125" Width="1199.667" KeyDown="Window_KeyDown" ResizeMode="NoResize">
+    <Grid x:Name="btnStartSorting" Margin="0" Background="#FF111111">
         <TabControl x:Name="StashTabs" HorizontalAlignment="Left" Margin="0,44,0,0" Width="1187" Height="26" VerticalAlignment="Top" SelectionChanged="StashTabs_SelectionChanged">
             <TabControl.Template>
                 <ControlTemplate TargetType="TabControl">
@@ -83,6 +83,10 @@
         <ComboBox x:Name="ddlSortOption" HorizontalAlignment="Left" Margin="618,13,0,0" VerticalAlignment="Top" Width="194" SelectionChanged="ddlSortOption_SelectionChanged"/>
         <Slider x:Name="sliderSpeed" HorizontalAlignment="Left" Margin="903,13,0,0" VerticalAlignment="Top" Width="154" SmallChange="0.01" TickFrequency="0.01" Minimum="0.1" Value="1" ValueChanged="sliderSpeed_ValueChanged" Maximum="2" LargeChange="0.3"/>
         <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="22" Margin="1017,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" ToolTip="Search tabs" TextChanged="txtSearch_TextChanged"/>
-
+        <StackPanel  Height="22" HorizontalAlignment="Left" VerticalAlignment="Bottom" Orientation="Horizontal" Width="247">
+            <TextBox Text="F5 - Refresh " Background="Black" Foreground="White" Height="22" IsEnabled="False"/>
+            <TextBox Text="F3 - Tab search " Background="Black" Foreground="White" Height="22" IsEnabled="False"/>
+            <TextBox Text="Esc - Interrupt " Background="Black" Foreground="White" Height="22" IsEnabled="False"/>
+        </StackPanel>
     </Grid>
 </Window>
