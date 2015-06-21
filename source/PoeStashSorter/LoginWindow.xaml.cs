@@ -43,6 +43,7 @@ namespace POEStashSorter
             servers.Add(new GeneralServer());
             servers.Add(new GarenaCisServer());
             servers.Add(new GarenaThServer());
+            servers.Add(new GarenaSgServer());
             CbComboBox.ItemsSource = servers;
             CbComboBox.DisplayMemberPath = "Name";
           
